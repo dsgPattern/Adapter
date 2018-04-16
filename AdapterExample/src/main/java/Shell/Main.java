@@ -1,15 +1,9 @@
 package Shell;
 
 import UI.*;
-import graphic.utils.FourSideShape;
-import graphic.utils.LineStyle;
-import graphic.utils.Point;
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
 public class Main extends Application implements IAddToScene {
@@ -48,6 +42,7 @@ public class Main extends Application implements IAddToScene {
     private void RepopulateScene(){
         _root.getChildren().clear();
         _mainWindow.PopulateScene(this);
+
     }
 
 }

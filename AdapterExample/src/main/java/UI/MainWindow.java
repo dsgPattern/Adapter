@@ -1,5 +1,7 @@
 package UI;
 
+import graphic.utils.FourSideShape;
+import graphic.utils.Point;
 
 public class MainWindow {
 
@@ -13,10 +15,17 @@ public class MainWindow {
         scene.Add(squareObj);
 
         //add circle
-        scene.Add(new Circle(200, 100, 20));
+        scene.Add(new Circle(250, 100, 20));
 
-        //add line
+        //add 4 side shape(FourSideShape)
+        FourSideShape shape =new FourSideShape(
+                new Point(10d,10d), //uperLeft
+                new Point(10d,200d),//lowerLeft
+                new Point(200d,200d),//lowerRight
+                new Point(200d,10d));//upperRight))
 
+
+        scene.Add(new FourShapeAdapter(shape));
 
 
     }
